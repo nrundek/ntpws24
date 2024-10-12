@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Odjel za brajicu i uvećani tisak COO 'Vinko Bek'">
+    <meta name="keywords" content="udžbenici, brajica, uvećani tisak, slijepi, slabovidni">
+    <meta name="author" content="Nikola Rundek, COO 'Vinko Bek'">
+    <title>Kontakt</title>
+    <style>
+body {
+line-height: 1.5;
+font-family: Arial, sans-serif;
+font-size: 20px;
+color: black;
+background-color: white;
+margin: 77px;
+margin-left: 25%;
+margin-right: 25%;
+opacity: 0.9;
+background: radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#fff7f6 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #fff7f6 2px, #fff 2px) -1px 0;
+background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+}
+
+h4 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+p {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.sirina-slova {
+    letter-spacing: 2px; 
+  }
+nav {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(255, 247, 246, 0.9); /* Slično pozadini */
+  padding: 15px 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #fff7f6;
+  color: #ff6666; /* Blaga promjena boje pri hover efektu */
+}
+
+nav a:active {
+  background-color: #ff6666;
+  color: white;
+}
+input {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+</style>
+</head>
+
+  <body>
+    <center>
+      <button class="gumb" id="increase-font-size">
+        + Povećaj font
+      </button>
+      <button class="gumb" id="decrease-font-size">
+        - Smanji font
+      </button>
+    </center>
+    <script>
+var increaseFontSizeBtn = document.getElementById("increase-font-size");
+var decreaseFontSizeBtn = document.getElementById("decrease-font-size");
+var allElements = document.getElementsByTagName("*");
+var fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+increaseFontSizeBtn.addEventListener("click", function() {
+  fontSize += 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize + 2) + "px";
+  }
+});
+
+decreaseFontSizeBtn.addEventListener("click", function() {
+  fontSize -= 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize - 2) + "px";
+  }
+});
+</script>
+<header>
+<nav>
+<a href="index.html">Početna stranica</a>
+<a href="clanci.html">Članci</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="onama.html">O nama</a>
+<a href="galerija.html">Galerija</a>
+</nav>
+</header>
+<main>
+<h1>Kontaktirajte nas</h1>
+<p>Sva su polja obavezna. </p>
+<form action="kontakt.php" method="POST" onsubmit="return validateForm()">
+        <label for="name">Ime i prezime:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="address">Adresa:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+        
+        <label for="postal">Poštanski broj:</label><br>
+        <input type="text" id="postal" name="postal" required><br><br>
+        
+        <label for="county">Odabir županije:</label><br>
+        <select id="county" name="county" required>
+            <option value="">Odaberite županiju</option>
+        <option value="zagreb">Zagrebačka županija</option>
+        <option value="krapina_zagorje">Krapinsko-zagorska županija</option>
+        <option value="sisak_moslavina">Sisačko-moslavačka županija</option>
+        <option value="karlovac">Karlovačka županija</option>
+        <option value="varaždin">Varaždinska županija</option>
+        <option value="koprivnica_krizevci">Koprivničko-križevačka županija</option>
+        <option value="bjelovar_bilogora">Bjelovarsko-bilogorska županija</option>
+        <option value="primorje_gorski_kotar">Primorsko-goranska županija</option>
+        <option value="licko_senjska">Ličko-senjska županija</option>
+        <option value="virovitica_podravina">Virovitičko-podravska županija</option>
+        <option value="pozega_slavonija">Požeško-slavonska županija</option>
+        <option value="brod_posavina">Brodsko-posavska županija</option>
+        <option value="zadar">Zadarska županija</option>
+        <option value="osijek_baranja">Osječko-baranjska županija</option>
+        <option value="sibensko_kninska">Šibensko-kninska županija</option>
+        <option value="vukovar_srijem">Vukovarsko-srijemska županija</option>
+        <option value="split_dalmatia">Splitsko-dalmatinska županija</option>
+        <option value="istria">Istarska županija</option>
+        <option value="dubrovnik_neretva">Dubrovačko-neretvanska županija</option>
+        <option value="medimurje">Međimurska županija</option>
+        <option value="grad_zagreb">Grad Zagreb</option>
+    </select>        
+        <label for="phone">Broj telefona:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+        
+        <label for="email">E-adresa:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <input type="submit" value="Pošalji">
+    </form>
+
+    <script>
+        function validateForm() {
+            const address = document.getElementById("address").value;
+            const postalCode = document.getElementById("postal").value;
+
+            // Jednostavna provjera adrese - duljina adrese treba biti barem 8 znakova
+            if (address.length < 8) {
+                alert("Unesite ispravnu adresu.");
+                return false;
+            }
+
+            // Poštanski broj mora biti 5 znamenki
+            if (!/^\d{5}$/.test(postalCode)) {
+                alert("Unesite ispravan poštanski broj (5 znamenki).");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+<p>
+    <h2>Karta - Centar za odgoj i obrazovanje "Vinko Bek"</h2>
+    <p>Adresa: Kušlanova 59a, Zagreb</p>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.744208916053!2d15.999282376702582!3d45.81888351127481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d65b74bda41b%3A0x8e0717f939dc72bb!2sCentar%20za%20odgoj%20i%20obrazovanje%20Vinko%20Bek!5e0!3m2!1shr!2shr!4v1697116798797!5m2!1shr!2shr" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</main>
+<footer>
+<p>
+Copyright Nikola Rundek - NTPWS, 2024.
+</p>
+<p>
+<a href="https://coovinkobek.hr/">COO "Vinko Bek"</a>
+</p>
+<p>
+<a href="https://github.com/nrundek/ntpws24">GitHub repozitorij stranice</a>
+</p>
+</footer>
+</body>
+</html>
+
+

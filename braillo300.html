@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Odjel za brajicu i uvećani tisak COO 'Vinko Bek'">
+    <meta name="keywords" content="udžbenici, brajica, uvećani tisak, slijepi, slabovidni">
+    <meta name="author" content="Nikola Rundek, COO 'Vinko Bek'">
+    <title>Braillo 300</title>
+    <style>
+body {
+line-height: 1.5;
+font-family: Arial, sans-serif;
+font-size: 20px;
+color: black;
+background-color: white;
+margin: 77px;
+margin-left: 25%;
+margin-right: 25%;
+opacity: 0.9;
+background: radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#fff7f6 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #fff7f6 2px, #fff 2px) -1px 0;
+background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+}
+
+h4 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+p {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.sirina-slova {
+    letter-spacing: 2px; 
+  }
+nav {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(255, 247, 246, 0.9); /* Slično pozadini */
+  padding: 15px 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #fff7f6;
+  color: #ff6666; /* Blaga promjena boje pri hover efektu */
+}
+
+nav a:active {
+  background-color: #ff6666;
+  color: white;
+}
+/* Naslov galerije */
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+/* Stil za galeriju slika */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Mreža s fleksibilnim stupcima */
+  gap: 20px; /* Razmak između slika */
+  padding: 20px;
+}
+
+/* Stil za svaku sliku i tekst ispod nje */
+figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Ograniči visinu slike */
+  object-fit: cover; /* Slika se prilagođava bez deformacije */
+  border-radius: 10px; /* Zaobljeni rubovi slike */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga sjena */
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05); /* Zoom efekt na hover */
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+</style>
+</head>
+  <body>
+    <center>
+      <button class="gumb" id="increase-font-size">
+        + Povećaj font
+      </button>
+      <button class="gumb" id="decrease-font-size">
+        - Smanji font
+      </button>
+    </center>
+    <script>
+var increaseFontSizeBtn = document.getElementById("increase-font-size");
+var decreaseFontSizeBtn = document.getElementById("decrease-font-size");
+var allElements = document.getElementsByTagName("*");
+var fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+increaseFontSizeBtn.addEventListener("click", function() {
+  fontSize += 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize + 2) + "px";
+  }
+});
+
+decreaseFontSizeBtn.addEventListener("click", function() {
+  fontSize -= 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize - 2) + "px";
+  }
+});
+</script>
+<header>
+<nav>
+<a href="index.html">Početna stranica</a>
+<a href="clanci.html">Članci</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="onama.html">O nama</a>
+<a href="galerija.html">Galerija</a>
+</nav>
+</header>
+<main>
+
+<article>
+<h1>Brajični pisač Braillo 300: Inovacija u tehnologiji za slijepe osobe</h1>
+<p>
+Braillo 300 je napredni brajični pisač, dizajniran za ispis materijala na brajici, namijenjen osobama oštećenog vida. Ovaj je pisač prepoznatljiv po svojoj izdržljivosti, brzini i preciznosti, što ga čini jednim od vodećih uređaja u industriji. U suvremenom svijetu, gdje je pristup informacijama ključan, Braillo 300 omogućuje slijepim osobama lakše i brže sudjelovanje u obrazovnim, poslovnim i svakodnevnim aktivnostima.
+</p>
+<p>
+Jedna od ključnih prednosti Braillo 300 pisača jest njegova brzina. Sposoban je proizvesti do 300 stranica u satu, čime omogućuje masovnu proizvodnju materijala. Ovo je izuzetno važno za škole, knjižnice i druge institucije koje trebaju brzo i učinkovito osigurati pristup obrazovnim resursima za slijepe i slabovidne osobe.
+</p>
+<p>
+Kvaliteta je ispisa na Braillo 300 pisaču na izuzetno visokoj razini. Stranice su jasne i precizne, omogućujući korisnicima lako čitanje brajičnih znakova. Također, ovaj pisač podržava obostrani ispis (dupleks), što smanjuje troškove papira i čini ga ekološki prihvatljivijim rješenjem.
+</p>
+Jedna je od velikih prednosti Braillo 300 njegova dugovječnost. Izgrađen je od robusnih materijala, što ga čini izdržljivim i pouzdanim u dugotrajnom korištenju. Ova je izdržljivost posebno korisna u okruženjima s velikim opterećenjem, gdje se svakodnevno ispisuje velik broj stranica. 
+</p>
+<p>
+U konačnici, Braillo 300 predstavlja značajan iskorak u tehnologiji za slijepe osobe. Njegove karakteristike - brzina, kvaliteta ispisa, dugotrajnost i podrška za obostrani ispis - čine ga idealnim izborom za institucije i pojedince koji žele osigurati materijale na brajici najveće kvalitete.
+</p>
+<p>
+<h2>Galerija slika</h2>
+<div class="gallery">
+<figure>
+<img src="braillo1.jpg" alt="1. slika">
+<figcaption>
+Na slici su prikazane upute za dodavanje mrežnog pisača u sustavu Windows 7. Gornji dio slike prikazuje prozor "Uređaji i pisači" u kojem su navedeni različiti pisači i uređaji. Upute ispod slike kažu: "Gå til kontrollpanel - Enheter og skrivere" što znači "Idite na upravljačku ploču - Uređaji i pisači".
+Donji dio slike prikazuje prozor s opcijama za dodavanje pisača. Upute ispod slike kažu: "Legg til nettverks skriver" što znači "Dodajte mrežni pisač". U prozoru je označena opcija "Legg til en nettverksskriver, trådløs skriver eller Bluetooth-skriver", što znači "Dodajte mrežni pisač, bežični pisač ili Bluetooth pisač".
+</figcaption>
+</figure>
+<figure>
+<img src="braillo2.jpg" alt="2. slika">
+<figcaption>
+Na slici su prikazana dva prozora na ekranu računala sa sustavom Windows. 
+Prvi prozor prikazuje dijalog "Dodaj pisač" s porukom "Pronalaženje pisača" i tekstom "Pisač koji želim nije naveden". Ispod toga je gumb "Pritisnite pisač nije naveden" (na norveškom: "Trykk skriver er ikke listet").
+Drugi prozor prikazuje opcije za pretraživanje pisača prema imenu ili TCP/IP adresi. U polju za unos je upisana adresa "http://172.16.32.159:631/printers/Braillo". Ispod toga su upute na norveškom i engleskom jeziku koje objašnjavaju kako odabrati dijeljeni pisač i unijeti adresu, te zamijeniti IP adresu s aktualnom IP adresom pisača.
+</figcaption>
+</figure>
+<figure>
+<img src="braillo3.jpg" alt="3. slika">
+<figcaption>
+Na slici su prikazani koraci za dodavanje pisača na Windows računalu. 
+Prvi korak prikazuje prozor "Dodaj pisač" gdje se traži odabir proizvođača i modela pisača. U ovom slučaju, odabran je proizvođač "Generic" i model "Generic / Text Only". Nakon toga, potrebno je pritisnuti "OK".
+Drugi korak prikazuje prozor u kojem se potvrđuje dodavanje pisača s IP adresom 172.16.32.159631. Potrebno je pritisnuti "Next" (Dalje).
+Treći korak prikazuje završni prozor gdje se potvrđuje da je pisač dodan. Potrebno je pritisnuti "Finish" (Završi).
+</figcaption>
+</figure>
+</article>
+</main>
+<footer>
+<p>
+Copyright Nikola Rundek - NTPWS, 2024.
+</p>
+<p>
+<a href="https://coovinkobek.hr/">COO "Vinko Bek"</a>
+</p>
+<p>
+<a href="https://github.com/nrundek/ntpws24">GitHub repozitorij stranice</a>
+</p>
+</footer>
+</body>
+</html>
+
+

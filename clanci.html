@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Odjel za brajicu i uvećani tisak COO 'Vinko Bek'">
+    <meta name="keywords" content="udžbenici, brajica, uvećani tisak, slijepi, slabovidni">
+    <meta name="author" content="Nikola Rundek, COO 'Vinko Bek'">
+    <title>Članci</title>
+    <style>
+body {
+line-height: 1.5;
+font-family: Arial, sans-serif;
+font-size: 20px;
+color: black;
+background-color: white;
+margin: 77px;
+margin-left: 25%;
+margin-right: 25%;
+opacity: 0.9;
+background: radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#fff7f6 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #fff7f6 2px, #fff 2px) -1px 0;
+background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+}
+
+h4 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+p {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.sirina-slova {
+    letter-spacing: 2px; 
+  }
+nav {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(255, 247, 246, 0.9); /* Slično pozadini */
+  padding: 15px 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #fff7f6;
+  color: #ff6666; /* Blaga promjena boje pri hover efektu */
+}
+
+nav a:active {
+  background-color: #ff6666;
+  color: white;
+}
+</style>
+
+  <body>
+    <center>
+      <button class="gumb" id="increase-font-size">
+        + Povećaj font
+      </button>
+      <button class="gumb" id="decrease-font-size">
+        - Smanji font
+      </button>
+    </center>
+    <script>
+var increaseFontSizeBtn = document.getElementById("increase-font-size");
+var decreaseFontSizeBtn = document.getElementById("decrease-font-size");
+var allElements = document.getElementsByTagName("*");
+var fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+increaseFontSizeBtn.addEventListener("click", function() {
+  fontSize += 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize + 2) + "px";
+  }
+});
+
+decreaseFontSizeBtn.addEventListener("click", function() {
+  fontSize -= 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize - 2) + "px";
+  }
+});
+</script>
+<header>
+<nav>
+<a href="index.html">Početna stranica</a>
+<a href="clanci.html">Članci</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="onama.html">O nama</a>
+<a href="galerija.html">Galerija</a>
+</nav>
+</header>
+<main>
+<h1>Zanimljivi članci
+</h1>
+<article>
+<h2>
+SVJETSKI DAN VIDA: POKAZALI STE NAM ŠTO JE ONO ŠTO VAMA NAJVIŠE ZNAČI!
+</h2>
+<p>
+U sklopu Svjetskog dana vida organizirali smo nagradni foto natječaj u kojem ste s nama podijelili fotografije svojih najljepših uspomena.
+</p>
+<p>Objavljeno: 4. listopada 2024.</p>
+<p>
+<a href="https://www.mojeoko.hr/svjetski-dan-vida-ono-sto-je-vazno">Pročitaj više</a>
+</p>
+</article>
+<article>
+<h2>
+Predrasuda na predrasudu u pisanju o slijepim osobama
+</h2>
+<p>
+Slijep kao šišmiš, krtica, slijep pored zdravih očiju, nitko nije tako slijep kao onaj koji ne želi vidjeti – brojne više ili manje otrcane fraze provlače se kroz naš svakodnevni govor, filmove koje gledamo, knjige koje čitamo. Kao ideju, činilo nam se, koristili su ih brojni više ili manje poznati pisci i spisateljice, mahom onih koji o sljepoći pišu iz pozicije videće osobe...
+</p>
+<p>Objavljeno: 24. 8. 2022.</p>
+<p>
+<a href="https://www.civilnodrustvo.hr/predrasuda-na-predrasudu-u-pisanju-o-slijepim-osobama/">Pročitaj više </a>
+</p>
+</article>
+<article>
+<h2>Prstima se može "čitati" brzo kao i očima</h2>
+<p>
+Tridesetak dekagrama, teška je knjiga "Vlak u snijegu" s tvrdim koricama. Ista knjiga, tiskana brajicom za potrebe slijepih, teška je oko 1 kilogram. Jedan od razloga za takvu razliku u težini je manji broj znakova u retku. Naime, u redak klasičnog crnog tiska stane 70 - 80 znakova, a u redak pisan brajicom stane 40 znakova.
+</p>
+<p>
+Objavljeno: 30. prosinca 2015.
+</p>
+<p>
+<a href="https://www.klincek.com/?p=7918">Pročitaj više</a>
+</p>
+</article>
+</main>
+<footer>
+<p>
+Copyright Nikola Rundek - NTPWS, 2024.
+</p>
+<p>
+<a href="https://coovinkobek.hr/">COO "Vinko Bek"</a>
+</p>
+<p>
+<a href="https://github.com/nrundek/ntpws24">GitHub repozitorij stranice</a>
+</p>
+</footer>
+</body>
+</html>
+

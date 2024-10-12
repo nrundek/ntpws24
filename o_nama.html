@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Odjel za brajicu i uvećani tisak COO "Vinko Bek"">
+    <meta name="keywords" content="udžbenici, brajica, uvećani tisak, slijepi, slabovidni">
+    <meta name="author" content="Nikola Rundek, COO "Vinko Bek"">
+    <title>Odjel za brajicu i uvećani tisak</title>
+    <style>
+body {
+line-height: 1.5;
+font-family: Arial, sans-serif;
+font-size: 20px;
+color: black;
+background-color: white;
+margin: 77px;
+margin-left: 25%;
+margin-right: 25%;
+opacity: 0.9;
+background: radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#fff7f6 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #fff7f6 2px, #fff 2px) -1px 0;
+background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+}
+
+h4 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+p {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.sirina-slova {
+    letter-spacing: 2px; 
+  }
+nav {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(255, 247, 246, 0.9); /* Slično pozadini */
+  padding: 15px 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #fff7f6;
+  color: #ff6666; /* Blaga promjena boje pri hover efektu */
+}
+
+nav a:active {
+  background-color: #ff6666;
+  color: white;
+}
+/* Naslov galerije */
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+/* Stil za galeriju slika */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Mreža s fleksibilnim stupcima */
+  gap: 20px; /* Razmak između slika */
+  padding: 20px;
+}
+
+/* Stil za svaku sliku i tekst ispod nje */
+figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Ograniči visinu slike */
+  object-fit: cover; /* Slika se prilagođava bez deformacije */
+  border-radius: 10px; /* Zaobljeni rubovi slike */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga sjena */
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05); /* Zoom efekt na hover */
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+</style>
+</head>
+
+  <body>
+    <center>
+      <button class="gumb" id="increase-font-size">
+        + Povećaj font
+      </button>
+      <button class="gumb" id="decrease-font-size">
+        - Smanji font
+      </button>
+    </center>
+    <script>
+var increaseFontSizeBtn = document.getElementById("increase-font-size");
+var decreaseFontSizeBtn = document.getElementById("decrease-font-size");
+var allElements = document.getElementsByTagName("*");
+var fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+increaseFontSizeBtn.addEventListener("click", function() {
+  fontSize += 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize + 2) + "px";
+  }
+});
+
+decreaseFontSizeBtn.addEventListener("click", function() {
+  fontSize -= 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize - 2) + "px";
+  }
+});
+</script>
+<header>
+<nav>
+<a href="index.html">Početna stranica</a>
+<a href="clanci.html">Članci</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="o_nama.html">O nama</a>
+<a href="galerija.html">Galerija</a>
+</nav>
+</header>
+<main>
+<h1>O nama</h1>
+<p>
+Centar za odgoj i obrazovanje "Vinko Bek" nalazi se na adresi Kušlanova 59a u Zagrebu. U njemu je ustrojeno nekoliko odjela, a jedan je od njih i Odjel za brajicu i uvećani tisak.
+</p>
+<p>U Odjelu je zaposleno 15 djelatnika različitih profila. Oni imaju dugogodišnje iskustvo u prilagodbi materijala za slijepe i slabovidne osobe.</p>
+<p>Sve upite možete uputiti voditeljici Odjela putem obrasca na poveznici Kontakt.</p>
+<p>Na kraju, pogledajte videospot Centra. Vidjet ćete i nas! </p>
+<p>
+<video width="640" height="360" controls>
+    <source src="spotvb.mp4" type="video/mp4">
+    Vaš preglednik ne podržava video tag.
+</video>
+</main>
+<footer>
+<p>
+Copyright Nikola Rundek - NTPWS, 2024.
+</p>
+<p>
+<a href="https://coovinkobek.hr/">COO "Vinko Bek"</a>
+</p>
+<p>
+<a href="https://github.com/nrundek/ntpws24">GitHub repozitorij stranice</a>
+</p>
+</footer>
+</body>
+</html>

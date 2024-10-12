@@ -9,54 +9,163 @@
     <meta name="author" content="Nikola Rundek, COO "Vinko Bek"">
     <title>Odjel za brajicu i uvećani tisak</title>
     <style>
-        /* Stilovi za zaglavlje i banner */
-        header {
-            background-color: #f1f1f1;
-            padding: 20px;
-            text-align: center;
-        }
+body {
+line-height: 1.5;
+font-family: Arial, sans-serif;
+font-size: 20px;
+color: black;
+background-color: white;
+margin: 77px;
+margin-left: 25%;
+margin-right: 25%;
+opacity: 0.9;
+background: radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#fff7f6 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #fff7f6 2px, #fff 2px) -1px 0;
+background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
 
-        .banner {
-            width: 100%; /* Relativna širina (100% širine roditelja) */
-            max-width: 1200px; /* Maksimalna širina bannera */
-            height: 200px;
-            background-image: url('banner.jpg'); /* Zamijenite s URL-om bannera */
-            background-size: cover;
-            background-position: center;
-            margin: 0 auto;
-        }
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+}
 
-        /* Stilovi za navigaciju */
-        nav {
-            margin-top: 20px;
-        }
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-        }
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+}
 
-        nav a:hover {
-            color: #007bff;
-        }
-    </style>
+h4 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+p {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.sirina-slova {
+    letter-spacing: 2px; 
+  }
+nav {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(255, 247, 246, 0.9); /* Slično pozadini */
+  padding: 15px 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #fff7f6;
+  color: #ff6666; /* Blaga promjena boje pri hover efektu */
+}
+
+nav a:active {
+  background-color: #ff6666;
+  color: white;
+}
+/* Naslov galerije */
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+/* Stil za galeriju slika */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Mreža s fleksibilnim stupcima */
+  gap: 20px; /* Razmak između slika */
+  padding: 20px;
+}
+
+/* Stil za svaku sliku i tekst ispod nje */
+figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Ograniči visinu slike */
+  object-fit: cover; /* Slika se prilagođava bez deformacije */
+  border-radius: 10px; /* Zaobljeni rubovi slike */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga sjena */
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05); /* Zoom efekt na hover */
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+</style>
 </head>
-<body>
+
+  <body>
+    <center>
+      <button class="gumb" id="increase-font-size">
+        + Povećaj font
+      </button>
+      <button class="gumb" id="decrease-font-size">
+        - Smanji font
+      </button>
+    </center>
+    <script>
+var increaseFontSizeBtn = document.getElementById("increase-font-size");
+var decreaseFontSizeBtn = document.getElementById("decrease-font-size");
+var allElements = document.getElementsByTagName("*");
+var fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+increaseFontSizeBtn.addEventListener("click", function() {
+  fontSize += 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize + 2) + "px";
+  }
+});
+
+decreaseFontSizeBtn.addEventListener("click", function() {
+  fontSize -= 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize - 2) + "px";
+  }
+});
+</script>
 <header>
-<div class="banner"></div> <!-- Banner sa apsolutnom ili relativnom širinom -->
 <nav>
 <a href="index.html">Početna stranica</a>
-<a href="novosti.html">Novosti</a>
+<a href="clanci.html">Članci</a>
 <a href="kontakt.html">Kontakt</a>
 <a href="onama.html">O nama</a>
 <a href="galerija.html">Galerija</a>
 </nav>
 </header>
-<h1>Odjel za brajicu i uvećani tisak</h1>
 <main>
-<h2>Poslovi Odjela</h2>
+<h1>Odjel za brajicu i uvećani tisak</h1>
 <p>
 Odjel za izdavačku djelatnost na brajici i uvećanom tisku prilagođava i posuđuje nastavne materijale u brajičnom, digitalnom i uvećanom formatu. To su udžbenici, radne bilježnice, zbirke, lektire, testovi za provjeru znanja, atlasi, bilježnice različitih uzoraka…
 </p>
@@ -66,33 +175,19 @@ Ti su materijali namijenjeni svim korisnicima - učenicima s oštećenjem vida k
 <p>
 Udžbenike i nastavne materijale Odjel posuđuje do kraja školske godine. Lektire je potrebno vratiti unutar 60 dana. Ispunjeni se materijali ne vraćaju.
 </p>
-<h3>Tko su korisnici usluga?</h3>
+<p>O našem "junaku" možete pročitati
+<br>
+<a href="braillo300.html">ovdje.</a>
+</p>
+<h2>Tko su korisnici usluga?</h2>
 <p>
 Sve osobe oštećenoga vida, pa tako i učenici, imaju pravo na psihosocijalne usluge Centra za odgoj i obrazovanje "Vinko Bek", a koje im odobrava Zavod za socijalni rad prema mjestu njihova prebivališta. Jedna je od usluga Centra i izdavanje i prilagodba nastavnoga materijala.
 </p>
 <p>
 <figure>
-<img src="emboss.jpg" alt="Otvoren dokument u programu Duxbury">
+<img src="logo_bek.jpg" alt="Logo Centra">
 <figcaption>
-<p>
-Na slici se nalazi prozor The Duxbury Braille Translator. U prozoru je otvoren brajični dokument. U sredini se slike nalazi dijaloški okvir Document: Embosser Setup. U njemu je moguće odabrati brajični pisač iz padajućeg izbornika. Trenutno je odabran Braillo 300 IP-160.
-<br>
-Ispod toga, u sekciji Desired Braille Document Formatting, moguće je postaviti različite opcije formatiranja dokumenta, kao što su:
-<br>
-- Veličina papira Form: 11.5 by 12 inches
-<br>
-- Broj znakova po liniji Characters per line: 40
-<br>
-- Broj linija po stranici Lines per page: 28
-<br>
-- Gornja margina u linijama Top margin in line: 0
-<br>
-- Margina za uvezivanje u znakovima Binding margin in characters: 0
-<br>
-Također, postoje opcije Emboss in Interpoint i Emboss Banner Page, od kojih je prva označena. 
-<br>
-Na lijevoj se strani dijaloškog okvira nalazi tekstualni oblačić Select the printer under document Embosser setup.
-</p>
+Slika prikazuje stilizirani logo u tamnocrvenoj boji na bijeloj pozadini. S lijeve strane nalaze se tri okrugla oblika poredana vertikalno. Desno od njih je oblik koji podsjeća na profil ljudske glave okrenut udesno. Oblik glave ima tri izbočine koje se protežu prema lijevoj strani, stvarajući dojam povezanosti s okruglim oblicima. Cijeli dizajn ima blagu sjenu koja stvara efekt trodimenzionalnosti.
 </figcaption>
 </figure>
 </main>
@@ -101,7 +196,7 @@ Na lijevoj se strani dijaloškog okvira nalazi tekstualni oblačić Select the p
 Copyright Nikola Rundek - NTPWS, 2024.
 </p>
 <p>
-<a href="coovinkobek.hr">COO "Vinko Bek"</a>
+<a href="https://coovinkobek.hr/">COO "Vinko Bek"</a>
 </p>
 <p>
 <a href="https://github.com/nrundek/ntpws24">GitHub repozitorij stranice</a>
