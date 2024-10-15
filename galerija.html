@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Odjel za brajicu i uvećani tisak COO 'Vinko Bek'">
+    <meta name="keywords" content="udžbenici, brajica, uvećani tisak, slijepi, slabovidni">
+    <meta name="author" content="Nikola Rundek, COO 'Vinko Bek'">
+    <title>Galerija slika</title>
+    <style>
+body {
+line-height: 1.5;
+letter-spacing: 2px;
+font-family: Arial, sans-serif;
+font-size: 20px;
+color: black;
+background-color: white;
+margin: 77px;
+margin-left: 25%;
+margin-right: 25%;
+opacity: 0.9;
+background: radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#fff7f6 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #fff7f6 2px, #fff 2px) -1px 0;
+background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+}
+
+h4 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+p {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+nav {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(255, 247, 246, 0.9); /* Slično pozadini */
+  padding: 15px 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0.95;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+nav a:hover {
+  background-color: #fff7f6;
+  color: #ff6666; /* Blaga promjena boje pri hover efektu */
+}
+nav a:active {
+  background-color: #ff6666;
+  color: white;
+}
+/* Naslov galerije */
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+/* Stil za galeriju slika */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Mreža s fleksibilnim stupcima */
+  gap: 20px; /* Razmak između slika */
+  padding: 20px;
+}
+/* Stil za svaku sliku i tekst ispod nje */
+figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Ograniči visinu slike */
+  object-fit: cover; /* Slika se prilagođava bez deformacije */
+  border-radius: 10px; /* Zaobljeni rubovi slike */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga sjena */
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05); /* Zoom efekt na hover */
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+</style>
+</head>
+  <body>
+    <center>
+      <button class="gumb" id="increase-font-size">
+        + Povećaj font
+      </button>
+      <button class="gumb" id="decrease-font-size">
+        - Smanji font
+      </button>
+    </center>
+    <script>
+var increaseFontSizeBtn = document.getElementById("increase-font-size");
+var decreaseFontSizeBtn = document.getElementById("decrease-font-size");
+var allElements = document.getElementsByTagName("*");
+var fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+increaseFontSizeBtn.addEventListener("click", function() {
+  fontSize += 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize + 2) + "px";
+  }
+});
+
+decreaseFontSizeBtn.addEventListener("click", function() {
+  fontSize -= 2;
+  for (var i = 0; i < allElements.length; i++) {
+    var elementFontSize = parseInt(window.getComputedStyle(allElements[i]).fontSize);
+    allElements[i].style.fontSize = (elementFontSize - 2) + "px";
+  }
+});
+</script>
+<header>
+<nav>
+<a href="index.html">Početna stranica</a>
+<a href="clanci.html">Članci</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="onama.html">O nama</a>
+<a href="galerija.html">Galerija</a>
+</nav>
+</header>
+<main>
+<h2>Galerija slika</h2>
+<p>
+Opisi su ovih slika dobiveni s pomoću umjetne inteligencije aplikacije Be My Eyes.
+</p>
+<p>Sve se slike otvaraju u novome prozoru.</p>
+<div class="gallery">
+<figure>
+<a href="slika1.jpg" target="_blank"
+alt="ruke na papiru">
+Slika 1
+</a>
+<figcaption>
+Ruke na papiru s brajičnim tekstom
+<details>
+<summary>Opširniji opis</summary>
+Slika prikazuje tekst "ODJEL ZA BRAJICU I UVEĆANI TISAK" na vrhu, a ispod toga je fotografija ruku koje čitaju Brajevo pismo na papiru. Pozadina je svijetloplava.
+</details>
+</figcaption>
+</figure>
+<figure>
+<a href="slika2.jpg" target="_blank"
+alt="tri uređaja">
+Slika 2</a>
+<figcaption>
+Tri uređaja povezana s brajicom
+<details>
+<summary>Opširniji opis</summary>
+Gore lijevo je zaslon računala na kojem je prikazan brajični tekst. 
+Gore desno je brajični pisač označen natpisom "brajev pisač". Pisač je marke Braillo, model 300.
+Dolje lijevo je brajični redak redak ispred kojeg se nalazi tipkovnica, a ispred nje su ruke osobe koja ga koristi. Ovaj dio slike je označen natpisom "brajev redak".
+Dolje desno je uređaj za izradu reljefnih crteža, označen natpisom "uređaj za izradu reljefnih crteža". Na njemu su vidljivi ventilatori i nekoliko kontrolnih tipki.
+</details>
+</figcaption>
+</figure>
+<figure>
+<a href="slika3.jpg" target="_blank"
+alt="uredski prostor">
+Slika 3
+</a>
+<figcaption>
+Uredski prostor
+<details>
+<summary>Opširniji opis</summary>
+Na slici se nalazi uredski prostor s puno papira i opreme za ispis. Lijevo se vidi polica s raznim fasciklima i hrpama papira. Na polici su crveni, žuti i plavi registratori. Na stolu ispod police nalaze se dvije velike hrpe papira. U sredini slike je žena koja stoji iza stola prepunog papira, držeći nekoliko listova u rukama. Iza nje su prozori s roletama. Desno se nalaze dva velika kopirna uređaja. Na stolu ispred njih također su hrpe papira. Ured djeluje vrlo zauzeto s puno dokumentacije.
+</details>
+</figcaption>
+</figure>
+<figure>
+<a href="slika4.jpg" target="_blank"
+alt="ispis brajice">
+Slika 4
+</a>
+<figcaption>
+Ispis brajičnoga teksta
+<details>
+<summary>Opširniji opis</summary>
+Na slici se nalazi brajični pisač Braillo 300. Postavljen je na plavu površinu i ispisuje papir s perforacijama na rubovima. Na desnoj strani pisača nalazi se zaslon osjetljiv na dodir, a ispod njega je natpis "BRAILLO 300". U pozadini se vidi dio prostorije s policama i drugom opremom.
+</details>
+</figcaption>
+</figure>
+<figure>
+<a href="slika5.jpg" target="_blank"
+alt="pisaći stroj">
+Slika 5 
+</a>
+<figcaption>
+Pisaći brajični stroj
+<details>
+<summary>Opširniji opis</summary>
+Na slici je Perkins brajični stroj, uređaj za pisanje. Ima metalno kućište plave boje s nekoliko tipki na prednjoj strani koje se koriste za utiskivanje brajičnih znakova na papir. Na vrhu stroja nalazi se ručka za nošenje.
+</details>
+</figcaption>
+</figure>
+<figure>
+<a href="slika6.jpg" target="_blank"
+alt="brajična stranica">
+Slika 6 
+</a>
+<figcaption>
+Brajična stranica
+<details>
+<summary>Opširniji opis</summary>
+Na slici je otvorena knjiga s Brajevim pismom. Stranica je osvijetljena s gornje lijeve strane, naglašavajući reljefne točkice koje čine Brajevo pismo. Tekst je raspoređen u redovima točkica koje su podignute iznad površine papira.
+</details>
+</figcaption>
+</figure>
+<figure>
+<a href="slika7.jpg" target="_blank"
+alt="tablica i šilo">
+Slika 7
+</a>
+<figcaption>
+Tablica i šilo
+<details>
+<summary>Opširniji opis</summary>
+Na slici se nalazi zelena plastična ploča s malim pravokutnim otvorima raspoređenima u mrežu. Otvori su veliki poput niza od šest točkica Brajevoga pisma. Pored ploče nalazi se šilo.
+</details>
+</figcaption>
+</figure>
+<figure>
+<a href="slika8.jpg" target="_blank"
+alt="geometrijski pribor">
+Slika 8
+</a>
+<figcaption>
+Geometrijski pribor
+<details>
+<summary>Opširniji opis</summary>
+Na slici se nalazi crna ploča s metalnom kopčom na vrhu za pričvršćivanje papira. Ispred ploče nalazi se plava ravnala, kutomjer, dva trokuta, šestar i crno ravnalo ili mjerilo.
+</details>
+</figcaption>
+</figure>
+<figure>
+<a href="slika9.jpg" target="_blank"
+alt="Brajeva abeceda">
+Slika 9
+</a>
+<figcaption>
+Hrvatska Brajeva abeceda
+<details>
+<summary>Opširniji opis</summary>
+Slika prikazuje Brajevo pismo za hrvatski jezik. Prikazane su oznake za slova abecede, interpunkciju i brojeve.
+</details>
+</figcaption>
+</figure>
+<figure>
+<a href="slika10.jpg" target="_blank"
+alt="zgrada Centra">
+Slika 10
+</a>
+<figcaption>
+Zgrada COO "Vinko Bek", Kušlanova 59a, Zagreb
+<details>
+<summary>Opširniji opis</summary>
+Na slici se nalazi zgrada s modernističkim elementima, uključujući dekorativne betonske blokove na fasadi. Zgrada ima natkriven ulaz s metalnim ogradama. Ispred zgrade nalazi se rampa za kontrolu pristupa, koja je spuštena. Na rampi je crvena kontrolna kutija. Na parkiralištu ispred zgrade parkirano je nekoliko automobila, uključujući crni Volkswagen s registarskom oznakom ZG 2295 GD. U pozadini se vidi građevinski kran, a oko zgrade su drveće i druge zgrade. Na zidu zgrade nalazi se ploča s natpisom i brojem 59.
+</details>
+</figcaption>
+</figure>
+<figure>
+<a href="slika11.jpg" target="_blank"
+alt="Vinko Bek">
+Slika 11
+</a>
+<figcaption>
+Vinko Bek
+<details>
+<summary>Opširniji opis</summary>
+Na slici je crno-bijeli portret starijeg muškarca. On je ćelav i nosi naočale s okruglim okvirima. Ima brkove i odjeven je u odijelo s kravatom. Gleda udesno, a izraz lica mu je ozbiljan, ali blag. Pozadina je neutralna i ne sadrži nikakve detalje.
+</details>
+</figcaption>
+</figure>
+</div>
+</main>
+<footer>
+<p>
+Copyright Nikola Rundek - NTPWS, 2024.
+</p>
+<p>
+<a href="https://coovinkobek.hr/">COO "Vinko Bek"</a>
+</p>
+<p>
+<a href="https://github.com/nrundek/ntpws24">GitHub repozitorij stranice</a>
+</p>
+</footer>
+</body>
+</html>
+
+

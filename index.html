@@ -11,6 +11,7 @@
     <style>
 body {
 line-height: 1.5;
+letter-spacing: 2px;
 font-family: Arial, sans-serif;
 font-size: 20px;
 color: black;
@@ -122,6 +123,17 @@ figcaption {
   font-size: 18px;
   color: #333;
 }
+summary {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px; 
+}
+
+details {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px; 
+}
 </style>
 </head>
 
@@ -160,7 +172,7 @@ decreaseFontSizeBtn.addEventListener("click", function() {
 <a href="index.html">Početna stranica</a>
 <a href="clanci.html">Članci</a>
 <a href="kontakt.html">Kontakt</a>
-<a href="onama.html">O nama</a>
+<a href="o_nama.html">O nama</a>
 <a href="galerija.html">Galerija</a>
 </nav>
 </header>
@@ -184,12 +196,18 @@ Udžbenike i nastavne materijale Odjel posuđuje do kraja školske godine. Lekti
 Sve osobe oštećenoga vida, pa tako i učenici, imaju pravo na psihosocijalne usluge Centra za odgoj i obrazovanje "Vinko Bek", a koje im odobrava Zavod za socijalni rad prema mjestu njihova prebivališta. Jedna je od usluga Centra i izdavanje i prilagodba nastavnoga materijala.
 </p>
 <p>
+<div class="gallery">
 <figure>
 <img src="logo_bek.jpg" alt="Logo Centra">
 <figcaption>
+Logo Centra
+<details>
+<summary>opširniji opis</summary>
 Slika prikazuje stilizirani logo u tamnocrvenoj boji na bijeloj pozadini. S lijeve strane nalaze se tri okrugla oblika poredana vertikalno. Desno od njih je oblik koji podsjeća na profil ljudske glave okrenut udesno. Oblik glave ima tri izbočine koje se protežu prema lijevoj strani, stvarajući dojam povezanosti s okruglim oblicima. Cijeli dizajn ima blagu sjenu koja stvara efekt trodimenzionalnosti.
+</details>
 </figcaption>
 </figure>
+</div>
 </main>
 <footer>
 <p>
